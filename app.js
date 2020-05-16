@@ -6,8 +6,8 @@ var nameHero = "";
 let heroMarvel = [];
 
 
-function marvelConection(finalNameHero) {
-    fetch(`http://gateway.marvel.com/v1/public/characters?name=${finalNameHero}&ts=${timeStamp}&apikey=${apiKey}&hash=${hash}`)
+function marvelConection(inputNameHero) {
+    fetch(`http://gateway.marvel.com/v1/public/characters?name=${inputNameHero}&ts=${timeStamp}&apikey=${apiKey}&hash=${hash}`)
         .then((response) => {
             if (!response.ok) throw new Error('Erro ao executar requisição: ' + response.status);
             return response.json();
@@ -40,10 +40,6 @@ searchBtn.addEventListener("click", () => {
         alert('enter the name of the character!');
     }
 
-});
-
-document.getElementById('teste').addEventListener('click', () => {
-    createSingleHero(urlImage, nameHero);
 });
 
 function treatHeroName(inputNameHero) {
