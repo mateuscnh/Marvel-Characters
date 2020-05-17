@@ -1,7 +1,7 @@
 let timeStamp = new Date().getTime();
-let apiKey = "PUBLIC_KEY";
-let privateKey = "PRIVATE_KEY";
-let hash = md5(timeStamp + privateKey + apiKey);
+let keyPublic = "PUBLIC_KEY";
+let keyPrivate = "PRIVATE_KEY";
+let hash = md5(timeStamp + keyPrivate + keyPublic);
 let urlImage = "";
 let nameHero = "";
 let heroDescription = "";
@@ -10,7 +10,7 @@ let avengers = ['Iron%20Man', 'Hulk', 'Captain%20America', 'Thor', 'Black%20Wido
 
 
 function marvelConection(inputNameHero) {
-    fetch(`http://gateway.marvel.com/v1/public/characters?name=${inputNameHero}&ts=${timeStamp}&apikey=${apiKey}&hash=${hash}`)
+    fetch(`http://gateway.marvel.com/v1/public/characters?name=${inputNameHero}&ts=${timeStamp}&apikey=${keyPublic}&hash=${hash}`)
         .then((response) => {
             if (!response.ok) throw new Error('Erro ao executar requisição: ' + response.status);
             return response.json();
@@ -72,6 +72,10 @@ window.onload = () => {
 }
 
 function addEvents() {
+    document.getElementById('logo').addEventListener('click', () => {
+        window.location.reload();
+    });
+
     document.getElementById('wrap').addEventListener('click', () => {
         document.getElementById('nameHeroDescription').innerText = event.path[1].innerText;
         let heroDescription = event.path[1].attributes[1].nodeValue;
