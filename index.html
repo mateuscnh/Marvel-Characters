@@ -4,31 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MARVEL CHARACTERS</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/7588e8cffb.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="container">
+
         <header>
             <div id="characters">
                 <img id="teste" src="images/marvel-logo.png">
                 <h1>Characters</h1>
             </div>
+
             <div id="search">
                 <input id="search-input" type="text" />
                 <p id="search-btn"><i class="fas fa-search"></i></p>
             </div>
         </header>
+
         <div id="slideshow">
-            <p><i class="fas fa-chevron-left"></i></p>
-            <p onclick="nextWrap()"><i class="fas fa-chevron-right"></i></p>
+            <p id="arrowLeft" onclick="previousWrap()"><i class="fas fa-chevron-left"></i></p>
+            <p id="arrowRight" onclick="nextWrap()"><i class="fas fa-chevron-right"></i></p>
             <div id="wrap"></div>
         </div>
+        <!--SLIDESHOW-->
+
+        <div id="hero">
+            <div id="imgHeroDescription"></div>
+            <div id="description">
+                <h2 id="exit"><i class="fas fa-times"></i></h2>
+                <h1 id="nameHeroDescription"></h1>
+                <p id="heroDescription"></p>
+            </div>
+        </div>
+        <!--HERO DESCRIPTION-->
 
         <footer>Data provided by Marvel. © 2014 Marvel</footer>
+
     </div>
+
     <script src="md5.js"></script>
     <script src="app.js"></script>
 </body>
