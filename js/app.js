@@ -1,6 +1,7 @@
 let timeStamp = new Date().getTime();
-let apiKey = "3a17ede23448f1a4556e95f4da4426f0";
-let hash = md5(timeStamp + "071ec58258b57252f96f47a82f2ad9501d9ccdf93a17ede23448f1a4556e95f4da4426f0");
+let apiKey = "PUBLIC_KEY";
+let privateKey = "PRIVATE_KEY";
+let hash = md5(timeStamp + privateKey + apiKey);
 let urlImage = "";
 let nameHero = "";
 let heroDescription = "";
