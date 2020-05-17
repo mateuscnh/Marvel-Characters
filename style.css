@@ -37,6 +37,7 @@ header #characters{
 }
 header img{
     height: 8vh; 
+    cursor: pointer;
 }
 header h1{
     color: white;
