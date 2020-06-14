@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="The News" title="The News" src="imagesGitHub/logo.png" width="300px" />
+    <img alt="Marvel Characters" title="Marvel Characters" src="imagesGitHub/logo.png" width="300px" />
 </h1>
 
 <p align="center">
@@ -10,7 +10,7 @@
 <br>
 
 <p align="center">
-  <img alt="The News" src="imagesGitHub/index.png" width="100%">
+  <img alt="Marvel Characters" src="imagesGitHub/index.png" width="100%">
 </p>
 
 ## 🚀 Technologies
